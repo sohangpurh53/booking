@@ -8,7 +8,7 @@ const DisplayData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/book/');
+        const response = await fetch('https://booking-mbim.onrender.com/book/');
         const result = await response.json();
         setData(result);
       } catch (error) {
@@ -20,7 +20,7 @@ const DisplayData = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://127.0.0.1:8000/book/${id}/`, {
+      const response = await fetch(`https://booking-mbim.onrender.com/book/${id}/`, {
         method: 'DELETE',
       });
       if (response.ok) {
@@ -80,7 +80,7 @@ export default DisplayData;
 //   useEffect(() => {
 //     const fetchData = async () => {
 //       try {
-//         const response = await fetch('http://127.0.0.1:8000/book/');
+//         const response = await fetch('https://booking-mbim.onrender.com/book/');
 //         const result = await response.json();
 //         setData(result);
 //       } catch (error) {
